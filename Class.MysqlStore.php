@@ -20,7 +20,7 @@ class MysqlStore {
  
         /**
          * Increase a stored number
-         * @param type $key
+         * @param string $key
          * @return int|boolean
          */
         public function inc($key)
@@ -47,7 +47,7 @@ class MysqlStore {
        
         /**
          * Decrease a stored number
-         * @param type $key
+         * @param string $key
          * @return boolean
          */
         public function dec($key)
@@ -73,9 +73,9 @@ class MysqlStore {
          
         /**
          * Store a variable in the datastore
-         * @param type $key
-         * @param type $value
-         * @param type $ttl
+         * @param string $key
+         * @param mixed $value
+         * @param int $ttl
          * @return boolean
          */
         public function store($key, $value, $ttl = 0)
@@ -93,7 +93,7 @@ class MysqlStore {
        
         /**
          * Fetch a stored variable from the datastore
-         * @param type $key
+         * @param string $key
          * @return boolean
          */
         public function fetch($key)
@@ -121,7 +121,7 @@ class MysqlStore {
        
         /**
          * Check if a key exists
-         * @param type $key
+         * @param string $key
          * @return boolean
          */
         public function exists($key)
@@ -137,7 +137,7 @@ class MysqlStore {
        
         /**
          * Delete a variable
-         * @param type $key
+         * @param string $key
          * @return type
          */
         public function delete($key)
@@ -152,7 +152,7 @@ class MysqlStore {
  
         /**
          * Check if a string is valid JSON
-         * @param type $string
+         * @param string $string
          * @return type
          */
         private function is_json( $string ) {
